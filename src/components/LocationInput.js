@@ -81,7 +81,7 @@ export const LocationInput = ({googleKey}) => {
       <input
         ref={autoCompleteRef}
         onChange={event => setQuery(event.target.value)}
-        placeholder="Enter name of a City..."
+        placeholder="Enter an address"
         value={query}
       />
     </div>
