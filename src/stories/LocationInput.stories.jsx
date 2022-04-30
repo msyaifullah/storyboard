@@ -21,5 +21,6 @@ export const Primary = Template.bind({});
 Primary.args = {
   googleKey: 'googlekey',
   label: 'Location Input',
-  isMapEnable: false
+  isMapEnable: false,
+  countries: ['id']
 };
