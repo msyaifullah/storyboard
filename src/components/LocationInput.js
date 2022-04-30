@@ -100,7 +100,9 @@ LocationInput.propTypes = {
 
   label: PropTypes.string.isRequired,
 
-  isMapEnable: PropTypes.bool
+  isMapEnable: PropTypes.bool,
+
+  countries: PropTypes.array
 }
 
 LocationInput.defaultProps = {
