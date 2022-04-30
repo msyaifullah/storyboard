@@ -97,6 +97,8 @@ LocationInput.propTypes = {
    * 
    */
   googleKey: PropTypes.string.isRequired,
+
+  label: PropTypes.string.isRequired
 }
 
 LocationInput.defaultProps = {
