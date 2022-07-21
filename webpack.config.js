@@ -12,11 +12,39 @@ const browserConfig = {
   },
   module: {
     rules: [
-      { test: /\.(js|jsx)$/,
+      {
+        test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
-        options: { presets: ['@babel/env','@babel/preset-react'] }},
-      { test: /\.css$/, use: [ 'css-loader' ]}
+        options: { presets: ['@babel/env', '@babel/preset-react'] }
+      },
+      { test: /\.css$/, use: ['css-loader'] },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        /* Exclude fonts while working with images, e.g. .svg can be both image or font. */
+        exclude: path.resolve(__dirname, 'src/assets/fonts'),
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'images/'
+          }
+        }]
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
+        /* Exclude images while working with fonts, e.g. .svg can be both image or font. */
+        exclude: path.resolve(__dirname, 'src/assets/images'),
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/'
+          }
+        }
+        ]
+
+      }
     ]
   },
   plugins: [
@@ -24,7 +52,7 @@ const browserConfig = {
       __isBrowser__: "true"
     })
   ]
-}
+};
 
 const serverConfig = {
   mode: "production",
@@ -40,11 +68,38 @@ const serverConfig = {
   },
   module: {
     rules: [
-      { test: /\.(js|jsx)$/,
+      {
+        test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
-        options: { presets: ['@babel/env','@babel/preset-react'] }},
-      { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader'] }
+        options: { presets: ['@babel/env', '@babel/preset-react'] }
+      },
+      { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader'] },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        /* Exclude fonts while working with images, e.g. .svg can be both image or font. */
+        exclude: path.resolve(__dirname, 'src/assets/fonts'),
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'images/'
+          }
+        }]
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
+        /* Exclude images while working with fonts, e.g. .svg can be both image or font. */
+        exclude: path.resolve(__dirname, 'src/assets/images'),
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/'
+          }
+        }
+        ]
+      }
     ]
   },
   plugins: [

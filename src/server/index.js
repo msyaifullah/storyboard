@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom/server';
 import { matchPath } from 'react-router-dom';
 import { StaticRouter } from 'react-router-dom/server';
 import serialize from 'serialize-javascript';
-import App from '../shared/App';
-import routes from '../shared/routes';
+import App from '../pages/App';
+import routes from '../pages/routes';
 
 const app = express();
 
