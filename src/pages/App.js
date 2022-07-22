@@ -5,6 +5,8 @@ import Navbar from './Navbar'
 import NoMatch from './NoMatch'
 import ColorfulBorder from './ColorfulBorder'
 import './styles.css'
+import comments from "../assets/images/comments.svg";
+import OpenSans from "../assets/fonts/OpenSans-Regular.ttf"
 
 export default function App ({ serverData=null }) {
   return (
