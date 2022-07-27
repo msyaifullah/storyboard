@@ -30,9 +30,9 @@
     "serialize-javascript": "^6.0.0"
   },
   "scripts": {
-    "build": "webpack",
     "start": "node dist/server.js",
-    "dev": "webpack && node dist/server.js",
+    "build": "webpack",
+    "dev": "npm run build && npm start",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -o docs-build -s public"
   },
