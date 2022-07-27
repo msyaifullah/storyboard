@@ -32,7 +32,7 @@
   "scripts": {
     "start": "node dist/server.js",
     "build": "webpack",
-    "dev": "npm run build && npm start",
+    "dev": "webpack --config webpack.config.dev.js && npm start",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -o docs-build -s public"
   },
