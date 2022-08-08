@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { LocationInput } from '../components/LocationInput';
+import { LocationInput } from '../../components/LocationInput';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: 'Example/LocationInput',
+    title: 'Components/LocationInput',
     component: LocationInput,
     // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
     argTypes: {

@@ -1,10 +1,10 @@
 import React from 'react';
 import { within, userEvent } from '@storybook/testing-library';
 
-import { Page } from '../components/Page';
+import { Page } from '../../components/Page';
 
 export default {
-  title: 'Example/Page',
+  title: 'Page/Sample/HomePage',
   component: Page,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
