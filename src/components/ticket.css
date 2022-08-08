@@ -51,3 +51,14 @@
   background: #fff;
   border-radius: 15px;
 }
+
+.ticket:hover {
+  background:#000;
+}
+
+.ticket:hover::after,
+.ticket:hover::before {
+  border: 5px solid #000;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
