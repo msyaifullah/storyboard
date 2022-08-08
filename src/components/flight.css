@@ -1,0 +1,78 @@
+.inversePair {
+  border: 1px solid black;
+  display: inline-block;    
+  position: relative;    
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  vertical-align: middle;
+}
+
+#a {
+  width: 100px;
+  border-radius: 50px;
+  background: grey;
+  z-index: 1;
+}
+
+#b {
+  width: 200px;
+  /* need to play with margin/padding adjustment
+     based on your desired "gap" */
+  padding-left: 30px;
+  margin-left: -30px;
+  /* real borders */
+  border-left: none;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /* the inverse circle "cut" */
+  background-image: -moz-radial-gradient(
+      -23px 50%, /* the -23px left position varies by your "gap" */
+      circle closest-corner, /* keep radius to half height */
+      transparent 0, /* transparent at center */
+      transparent 55px, /*transparent at edge of gap */
+      black 56px, /* start circle "border" */
+      grey 57px /* end circle border and begin color of rest of background */
+  );
+  background-image: -webkit-radial-gradient(-23px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, grey 57px);
+  background-image: -ms-radial-gradient(-23px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, grey 57px);
+  background-image: -o-radial-gradient(-23px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, grey 57px);
+  background-image: radial-gradient(-23px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, grey 57px);
+}
+
+#c {
+  width: 200px;
+  
+  padding-right: 30px;
+  margin-right: -30px;
+
+  border-right: none;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-bottopleft: 5px;
+
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  /* the inverse circle "cut" */
+  background-image: -moz-radial-gradient(
+    252px 50%, /* the -23px left position varies by your "gap" */
+      circle closest-corner, /* keep radius to half height */
+      transparent 0, /* transparent at center */
+      transparent 55px, /*transparent at edge of gap */
+      black 56px, /* start circle "border" */
+      grey 57px /* end circle border and begin color of rest of background */
+  );
+
+  background-image: -webkit-radial-gradient(252px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, grey 57px);
+  background-image: -ms-radial-gradient(252px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, grey 57px);
+  background-image: -o-radial-gradient(252px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, grey 57px);
+  background-image: radial-gradient(252px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, grey 57px);
+}
+
