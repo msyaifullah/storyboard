@@ -13,6 +13,11 @@ export const Flight = () => {
           <span>testing</span>
         </div>
       </div>
+      <div class="ticket-right">
+        <div class="ticket-right-content-wrapper">
+          <span>testing</span>
+        </div>
+      </div>
     </div>
   );
 }
