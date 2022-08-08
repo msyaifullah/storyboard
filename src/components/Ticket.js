@@ -7,7 +7,9 @@ export const Ticket = () => {
 
   return (
     <div class="ticket">
-      <div class="ticket-content-wrapper"></div>
+      <div class="ticket-content-wrapper">
+        <span>testing</span>
+      </div>
     </div>
   );
 }
