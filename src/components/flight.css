@@ -14,9 +14,9 @@
   content: '';
   display: block;
   position: absolute;
-  top: 12px;
-  width: 20px;
-  height: 20px;
+  top: 9px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   z-index: 2;
   background-color: #fff;
@@ -27,12 +27,12 @@
 
 .ticket-left:after {  
   transform: rotate(135deg);
-  right: -12px;
+  right: -13px;
 }
 
 .ticket-right::before {
   transform: rotate(-45deg);
-  left: -12px;
+  left: -13px;
 }
 
 .ticket-left-content-wrapper, 
