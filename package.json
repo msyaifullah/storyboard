@@ -7,9 +7,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/msyaifullah/react-components-moss.git"
+    "url": "git+https://github.com/msyaifullah/storyboard.git"
   },
-  "homepage": "https://github.com/msyaifullah/react-components-moss/blob/master/README.md",
+  "homepage": "https://msyaifullah.github.io/storyboard",
   "keywords": [
     "react",
     "autocomplete",
